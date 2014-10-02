@@ -1,6 +1,11 @@
 import xmlsec
 
 
+# Code directly copied from original xmlsec bindings, so will not work with
+# this library yet. Just copied those as a placeholder for 'it should be
+# something like this'
+
+
 def sign(body, key_path, key_pass=None, key_name=None, key_format='pem', *args, **kwargs):
     """Convenience method to signing the provided xml using the provided key.
     
@@ -545,7 +550,7 @@ def _init():
     if xmlsec.cryptoInit() < 0:
         raise DSigError("Failed initializing xmlsec-crypto library")
     
-_init()
+#_init()
 
 def destroy():
     """Destroys the modules loaded by this module. Should be called after
